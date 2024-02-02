@@ -1,0 +1,55 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry":    [
+        {
+            "fullUrl": "urn.uuid:patient",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "pat1",
+                "name": [
+                    {
+                        "family": "Doe",
+                        "given": [
+                            "John"
+                        ]
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "obs1",
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "789-8",
+                            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+                        }
+                    ]
+                },
+                "subject": {
+                    "type":"Patient",
+                    "reference": "urn.uuid:patient"
+                },
+                "valueQuantity": {
+                    "value": 4.12,
+                    "unit": "10 trillion/L",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "10*12/L"
+                }
+            },
+            "request": {
+                "method": "POST",
+                "url": "Observation"
+            }
+        }
+    ]
+}
