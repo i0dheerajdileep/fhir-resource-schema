@@ -1,0 +1,33 @@
+{
+    "resourceType" : "Patient",
+    "name" : [
+        {
+            "use" : "official",
+            "given" : ["John"],
+            "family" : "Doe"
+
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1970-01-01",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "555-555-5555",
+            "use": "home"
+        },
+        {
+            "system": "email",
+            "value": "randome@gmail.com"
+        }
+    ],
+    "address": [
+        {
+            "use": "home",
+            "line": ["123 Main St"],
+            "city": "Somewhere",
+            "state": "CA",
+            "postalCode": "12345"
+        }
+    ]
+}
